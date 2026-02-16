@@ -1,0 +1,147 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+/* ===== BODY ===== */
+body{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container{
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ===== GLASS CARD ===== */
+.glass{
+    background:rgba(255,255,255,0.08);
+    border-radius:20px;
+    padding:30px;
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 8px 32px rgba(0,0,0,0.3);
+    transition:0.4s ease;
+}
+
+.glass:hover{
+    transform:translateY(-6px);
+    box-shadow:0 12px 40px rgba(0,0,0,0.4);
+}
+
+/* ===== HERO ===== */
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:42px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero h2{
+    font-weight:400;
+    margin-top:10px;
+    opacity:0.8;
+}
+
+.bio{
+    margin-top:15px;
+    font-size:14px;
+    opacity:0.7;
+}
+
+/* ===== CONTACT ===== */
+.contact h2{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.contact-links{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-links a{
+    text-decoration:none;
+    color:#fff;
+    background:rgba(255,255,255,0.05);
+    padding:12px 15px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    transition:0.3s ease;
+}
+
+.contact-links a:hover{
+    background:rgba(255,255,255,0.15);
+    transform:translateX(6px);
+}
+
+/* ===== HOBBIES ===== */
+.hobbies h2{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.hobby-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:rgba(255,255,255,0.05);
+    padding:12px 15px;
+    border-radius:12px;
+    margin-bottom:12px;
+    transition:0.3s ease;
+}
+
+.hobby-item:hover{
+    background:rgba(255,255,255,0.15);
+}
+
+.hobby-item a{
+    color:#fff;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.hobby-item a:hover{
+    color:#00d4ff;
+    transform:translateX(5px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .hero h1{
+        font-size:32px;
+    }
+
+    .glass{
+        padding:20px;
+    }
+}
+
+@media(max-width:480px){
+    .container{
+        margin:40px auto;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+}
