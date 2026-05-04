@@ -1,64 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ozodbek | Frontend Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ozodbek | contact-links</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
-    <!-- Font Awesome -->
     <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
 
-    <!-- Google Font -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
     />
-</head>
-<body>
+  </head>
 
+  <body>
     <div class="container">
+      <section class="glass hero">
+        <h1>Ozodbek</h1>
+      </section>
 
-        <!-- HERO -->
-        <section class="glass hero">
-            <h1>Ozodbek</h1>
-        </section>
+      <section class="glass contact">
+        <h2>Contact</h2>
 
-        <!-- CONTACT -->
-        <section class="glass contact">
-            <h2>Contact</h2>
+        <div class="contact-links">
+          <a href="tel:+998990122605">
+            <i class="fa-solid fa-phone"></i>
+            +998 99 012 26 05
+          </a>
 
-            <div class="contact-links">
+          <a href="tel:+998959630600">
+            <i class="fa-solid fa-phone"></i>
+            +998 95 963 06 00
+          </a>
 
-                <a href="tel:+998990122605">
-                    <i class="fa-solid fa-phone"></i>
-                    +998 99 012 26 05
-                </a>
+          <a href="https://t.me/Azadbei" target="_blank">
+            <i class="fa-brands fa-telegram"></i>
+            Telegram Profile
+          </a>
 
-                <a href="tel:+998959630600">
-                    <i class="fa-solid fa-phone"></i>
-                    +998 95 963 06 00
-                </a>
-                
-                <a href="https://t.me/Azadbei" target="_blank">
-                    <i class="fa-brands fa-telegram"></i>
-                    Telegram Profile
-                </a>
+          <a href="https://instagram.com/azadbei" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
 
-                <a href="https://instagram.com/azadbei" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                    Instagram
-                </a>
+          <div class="card-number" id="card">
+            <i class="fa-solid fa-credit-card"></i>
 
+            <div class="card-info">
+              <span class="card-owner">JUMANAZAROV OZODBEK</span>
+              <span id="card-text">5614 6829 1392 1443</span>
             </div>
-        </section>
-
+          </div>
+          
+        </div>
+      </section>
     </div>
 
-</body>
+    <div class="toast" id="toast">Copied ✅</div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

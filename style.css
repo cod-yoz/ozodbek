@@ -1,147 +1,142 @@
-/* ===== RESET ===== */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-/* ===== BODY ===== */
-body{
-    min-height:100vh;
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:#fff;
-    overflow-x:hidden;
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
 }
 
-/* ===== MAIN CONTAINER ===== */
-.container{
-    width:90%;
-    max-width:900px;
-    margin:80px auto;
-    display:flex;
-    flex-direction:column;
-    gap:30px;
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* ===== GLASS CARD ===== */
-.glass{
-    background:rgba(255,255,255,0.08);
-    border-radius:20px;
-    padding:30px;
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,0.2);
-    box-shadow:0 8px 32px rgba(0,0,0,0.3);
-    transition:0.4s ease;
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.glass:hover{
-    transform:translateY(-6px);
-    box-shadow:0 12px 40px rgba(0,0,0,0.4);
+.hero {
+  text-align: center;
 }
 
-/* ===== HERO ===== */
-.hero{
-    text-align:center;
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.hero h1{
-    font-size:42px;
-    font-weight:700;
-    letter-spacing:1px;
+.contact-links a {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
-.hero h2{
-    font-weight:400;
-    margin-top:10px;
-    opacity:0.8;
+.contact-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(6px);
 }
 
-.bio{
-    margin-top:15px;
-    font-size:14px;
-    opacity:0.7;
+/* CARD */
+.card-number {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  border-radius: 12px;
+  cursor: pointer;
+
+  display: flex; /* 🔥 MUHIM */
+  align-items: center; /* 🔥 MUHIM */
+  gap: 10px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
 }
 
-/* ===== CONTACT ===== */
-.contact h2{
-    margin-bottom:20px;
-    font-size:22px;
+.card-number i {
+  font-size: 16px;
 }
 
-.contact-links{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+.card-number:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(6px);
 }
 
-.contact-links a{
-    text-decoration:none;
-    color:#fff;
-    background:rgba(255,255,255,0.05);
-    padding:12px 15px;
-    border-radius:12px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    transition:0.3s ease;
+.card-number:active {
+  transform: scale(0.97);
 }
 
-.contact-links a:hover{
-    background:rgba(255,255,255,0.15);
-    transform:translateX(6px);
+.card-info {
+  display: flex;
+  flex-direction: column;
 }
 
-/* ===== HOBBIES ===== */
-.hobbies h2{
-    margin-bottom:20px;
-    font-size:22px;
+.card-owner {
+  font-size: 12px;
+  opacity: 0.7;
 }
 
-.hobby-item{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    background:rgba(255,255,255,0.05);
-    padding:12px 15px;
-    border-radius:12px;
-    margin-bottom:12px;
-    transition:0.3s ease;
+#card-text {
+  font-weight: 600;
 }
 
-.hobby-item:hover{
-    background:rgba(255,255,255,0.15);
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
-.hobby-item a{
-    color:#fff;
-    text-decoration:none;
-    transition:0.3s;
+.card-bank {
+  font-size: 12px;
+  opacity: 0.7;
+  letter-spacing: 1px;
 }
 
-.hobby-item a:hover{
-    color:#00d4ff;
-    transform:translateX(5px);
+.card-logo {
+  font-size: 18px;
+  opacity: 0.8;
 }
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:768px){
-    .hero h1{
-        font-size:32px;
-    }
-
-    .glass{
-        padding:20px;
-    }
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 0.4s;
 }
 
-@media(max-width:480px){
-    .container{
-        margin:40px auto;
-    }
-
-    .hero h1{
-        font-size:26px;
-    }
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
