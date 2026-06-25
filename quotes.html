@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ozodbek | Quotes</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+  <style>
+
+    .quotes{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .quote{
+      text-decoration:none;
+      color:#fff;
+
+      background:rgba(255,255,255,0.05);
+
+      padding:12px 15px;
+
+      border-radius:12px;
+
+      transition:transform .25s ease,
+                 background .25s ease;
+
+      cursor:pointer;
+
+      line-height:1.6;
+    }
+
+    .quote:hover{
+      background:rgba(255,255,255,0.15);
+      transform:translateX(6px);
+    }
+
+    .quote:active{
+      transform:scale(.98);
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+  <section class="glass hero">
+
+      <h1>Quotes</h1>
+
+  </section>
+
+
+
+  <section class="glass">
+
+      <div class="quotes">
+
+          <div class="quote">
+            Qanchalik yaxshi bo'lmasin, agar siz noto'g'ri joyda bo'lsangiz, hech narsaga arzimaysiz.
+          </div>
+
+
+          <div class="quote">
+            Eshiklarni qattiqroq yoping. Sizga kerak bo'lgan kishi ularni buzadi, qolganlari esa sizga kerak emas.
+          </div>
+
+
+          <div class="quote">
+            Qiz bola sizni tashqi ko‘rinishingiz uchun emas, unga bo‘lgan munosabatingiz uchun yaxshi ko‘radi.
+          </div>
+
+
+          <div class="quote">
+            Jimlik ba'zan minglab so'zlardan kuchliroq bo'ladi.
+          </div>
+
+      </div>
+
+  </section>
+
+</div>
+
+
+<div class="toast" id="toast">
+
+Copied ✅
+
+</div>
+
+
+<script>
+
+const quotes = document.querySelectorAll(".quote");
+const toast = document.getElementById("toast");
+
+
+quotes.forEach(q => {
+
+    q.addEventListener("click",()=>{
+
+        navigator.clipboard.writeText(q.innerText);
+
+        toast.classList.add("show");
+
+        setTimeout(()=>{
+
+            toast.classList.remove("show");
+
+        },2000);
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
