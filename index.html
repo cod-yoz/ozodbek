@@ -1,75 +1,209 @@
 <!doctype html>
 <html lang="uz">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ozodbek | contact-links</title>
 
-    <link rel="stylesheet" href="style.css" />
+<head>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<title>Ozodbek | Contact Links</title>
 
-  <body>
-    <div class="container">
-      <section class="glass hero">
-        <h1>Ozodbek</h1>
-      </section>
+<link rel="stylesheet" href="style.css">
 
-      <section class="glass contact">
-        <h2>Contact</h2>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <div class="contact-links">
-          <a href="tel:+998990122605">
-            <i class="fa-solid fa-phone"></i>
-            +998 99 012 26 05
-          </a>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet">
 
-          <a href="tel:+998505022117">
-            <i class="fa-solid fa-phone"></i>
-            +998 50 502 21 17
-          </a>
+<style>
 
-          <a href="https://t.me/Azadbei" target="_blank">
-            <i class="fa-brands fa-telegram"></i>
-            Telegram Profile
-          </a>
+.avatar{
 
-          <a href="https://instagram.com/azadbei" target="_blank">
-            <i class="fa-brands fa-instagram"></i>
-            Instagram
-          </a>
+width:120px;
+height:120px;
 
-          <div class="card-number" id="card">
-            <i class="fa-solid fa-credit-card"></i>
+border-radius:50%;
 
-            <div class="card-info">
-              <span class="card-owner">JUMANAZAROV OZODBEK</span>
-              <span id="card-text">5614 6829 1392 1443</span>
-            </div>
-          </div>
-        		
-        			<div class="quote-link">
-  <a href="quotes.html">
-    <i class="fa-solid fa-book"></i>
-    My Quotes
-  </a>
+object-fit:cover;
+
+border:3px solid rgba(255,255,255,.2);
+
+margin-bottom:15px;
+
+box-shadow:0 0 25px rgba(255,255,255,.15);
+
+}
+
+.subtitle{
+
+font-size:14px;
+
+opacity:.7;
+
+margin-top:5px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<section class="glass hero">
+
+<img src="#" class="avatar">
+
+<h1>Ozodbek</h1>
+
+<p class="subtitle">
+
+Quotes • Contacts • Links
+
+</p>
+
+</section>
+
+
+
+<section class="glass contact">
+
+<h2>Contact</h2>
+
+
+<div class="contact-links">
+
+
+<a href="tel:+998990122605">
+
+<i class="fa-solid fa-phone"></i>
+
++998 99 012 26 05
+
+</a>
+
+
+
+<a href="tel:+998505022117">
+
+<i class="fa-solid fa-phone"></i>
+
++998 50 502 21 17
+
+</a>
+
+
+
+<a href="https://t.me/Azadbei" target="_blank">
+
+<i class="fa-brands fa-telegram"></i>
+
+Telegram
+
+</a>
+
+
+
+<a href="https://instagram.com/azadbei" target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+Instagram
+
+</a>
+
+
+
+<a href="quotes.html">
+
+<i class="fa-solid fa-book-open"></i>
+
+Quotes
+
+</a>
+
+
+
+
+<div class="card-number" id="card">
+
+
+<i class="fa-solid fa-credit-card"></i>
+
+
+
+<div class="card-info">
+
+<span class="card-owner">
+
+JUMANAZAROV OZODBEK
+
+</span>
+
+
+
+<span id="card-text">
+
+5614 6829 1392 1443
+
+</span>
+
+
 </div>
-          
-        </div>
-      </section>
-    </div>
 
-    <div class="toast" id="toast">Copied ✅</div>
+</div>
 
-    <script src="script.js"></script>
-  </body>
+
+</div>
+
+
+</section>
+
+
+</div>
+
+
+
+<div class="toast" id="toast">
+
+Copied ✅
+
+</div>
+
+
+
+<script>
+
+let card=document.getElementById("card");
+
+let text=document.getElementById("card-text");
+
+let toast=document.getElementById("toast");
+
+
+card.addEventListener("click",()=>{
+
+navigator.clipboard.writeText(text.innerText);
+
+toast.classList.add("show");
+
+
+setTimeout(()=>{
+
+toast.classList.remove("show");
+
+},2000);
+
+});
+
+</script>
+
+
+</body>
+
 </html>
