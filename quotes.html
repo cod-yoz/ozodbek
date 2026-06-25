@@ -3,97 +3,257 @@
 
 <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ozodbek | Quotes</title>
+<title>Ozodbek | Quotes</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet">
 
-  <style>
+<style>
 
-    .quotes{
-      display:flex;
-      flex-direction:column;
-      gap:15px;
-    }
+.avatar{
 
-    .quote{
-      text-decoration:none;
-      color:#fff;
+width:120px;
+height:120px;
 
-      background:rgba(255,255,255,0.05);
+border-radius:50%;
+object-fit:cover;
 
-      padding:12px 15px;
+border:3px solid rgba(255,255,255,.2);
 
-      border-radius:12px;
+margin-bottom:15px;
 
-      transition:transform .25s ease,
-                 background .25s ease;
+box-shadow:0 0 25px rgba(255,255,255,.15);
 
-      cursor:pointer;
+}
 
-      line-height:1.6;
-    }
 
-    .quote:hover{
-      background:rgba(255,255,255,0.15);
-      transform:translateX(6px);
-    }
+.subtitle{
 
-    .quote:active{
-      transform:scale(.98);
-    }
+font-size:14px;
+opacity:.7;
 
-  </style>
+margin-top:5px;
+
+}
+
+
+.search{
+
+margin-top:20px;
+
+width:100%;
+
+padding:12px 15px;
+
+border:none;
+
+outline:none;
+
+border-radius:12px;
+
+background:rgba(255,255,255,.05);
+
+color:white;
+
+font-size:14px;
+
+}
+
+
+.search::placeholder{
+
+color:rgba(255,255,255,.6);
+
+}
+
+
+.random{
+
+margin-top:15px;
+
+background:rgba(255,255,255,.05);
+
+padding:12px 15px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+transition:.25s;
+
+}
+
+
+.random:hover{
+
+background:rgba(255,255,255,.15);
+
+transform:translateX(6px);
+
+}
+
+
+.quotes{
+
+display:flex;
+
+flex-direction:column;
+
+gap:15px;
+
+margin-top:20px;
+
+}
+
+
+.quote{
+
+background:rgba(255,255,255,.05);
+
+padding:15px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+line-height:1.7;
+
+transition:.25s;
+
+}
+
+
+.quote:hover{
+
+background:rgba(255,255,255,.15);
+
+transform:translateX(6px);
+
+}
+
+
+.home{
+
+text-decoration:none;
+
+color:white;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin-bottom:20px;
+
+}
+
+
+</style>
 
 </head>
 
+
 <body>
+
 
 <div class="container">
 
 
-  <section class="glass hero">
+<a class="home" href="index.html">
 
-      <h1>Quotes</h1>
+<i class="fa-solid fa-arrow-left"></i>
 
-  </section>
+Home
 
-
-
-  <section class="glass">
-
-      <div class="quotes">
-
-          <div class="quote">
-            Qanchalik yaxshi bo'lmasin, agar siz noto'g'ri joyda bo'lsangiz, hech narsaga arzimaysiz.
-          </div>
+</a>
 
 
-          <div class="quote">
-            Eshiklarni qattiqroq yoping. Sizga kerak bo'lgan kishi ularni buzadi, qolganlari esa sizga kerak emas.
-          </div>
+
+<section class="glass hero">
 
 
-          <div class="quote">
-            Qiz bola sizni tashqi ko‘rinishingiz uchun emas, unga bo‘lgan munosabatingiz uchun yaxshi ko‘radi.
-          </div>
+<img src="#" class="avatar">
 
 
-          <div class="quote">
-            Jimlik ba'zan minglab so'zlardan kuchliroq bo'ladi.
-          </div>
+<h1>Ozodbek</h1>
 
-      </div>
 
-  </section>
+<p class="subtitle">
+
+Quotes • Contacts • Links
+
+</p>
+
+
+<input
+type="text"
+id="search"
+
+class="search"
+
+placeholder="Search quotes...">
+
+
+<div class="random" id="random">
+
+<i class="fa-solid fa-dice"></i>
+
+Random Quote
+
+</div>
+
+
+</section>
+
+
+
+<section class="glass">
+
+
+<div class="quotes" id="quotes">
+
+  <div class="quote">
+Qanchalik yaxshi bo'lmasin, agar siz noto'g'ri joyda bo'lsangiz, hech narsaga arzimaysiz.
+</div>
+
+<div class="quote">
+Eshiklarni qattiqroq yoping. Sizga kerak bo'lgan kishi ularni buzadi, qolganlari esa sizga kerak emas.
+</div>
+
+<div class="quote">
+Qiz bola sizni tashqi ko'rinishingiz uchun emas, unga qanday munosabatda bo'lishingiz uchun yaxshi ko'radi.
+</div>
+
+<div class="quote">
+Jimlik ba'zan minglab so'zlardan kuchliroq bo'ladi.
+</div>
+
+<div class="quote">
+O'zingizni qadrlamaydigan joyda uzoq qolmang.
+</div>
+
+<div class="quote">
+Ba'zi insonlar dars bo'lib keladi, ba'zilari esa baxt.
+</div>
+
+</div>
+
+</section>
 
 </div>
 
@@ -109,27 +269,76 @@ Copied ✅
 
 const quotes = document.querySelectorAll(".quote");
 const toast = document.getElementById("toast");
+const search = document.getElementById("search");
+const random = document.getElementById("random");
 
 
 quotes.forEach(q => {
 
-    q.addEventListener("click",()=>{
+q.addEventListener("click",()=>{
 
-        navigator.clipboard.writeText(q.innerText);
+navigator.clipboard.writeText(q.innerText);
 
-        toast.classList.add("show");
+toast.classList.add("show");
 
-        setTimeout(()=>{
+setTimeout(()=>{
 
-            toast.classList.remove("show");
+toast.classList.remove("show");
 
-        },2000);
-
-    });
+},2000);
 
 });
 
+});
+
+
+
+search.addEventListener("keyup",()=>{
+
+let value = search.value.toLowerCase();
+
+quotes.forEach(q=>{
+
+q.style.display = q.innerText.toLowerCase().includes(value)
+
+? "block"
+
+: "none";
+
+});
+
+});
+
+
+
+random.addEventListener("click",()=>{
+
+let arr = [...quotes];
+
+let item = arr[Math.floor(Math.random()*arr.length)];
+
+item.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+item.style.background = "rgba(255,255,255,.2)";
+
+
+setTimeout(()=>{
+
+item.style.background = "rgba(255,255,255,.05)";
+
+},1500);
+
+});
+
+
 </script>
+
 
 </body>
 
